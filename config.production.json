@@ -1,17 +1,13 @@
 {
-  "url": "http://localhost:10000",
+  "url": "https://ai-bility-ghost-blogs.onrender.com",
   "server": {
-    "port": 10000,
+    "port": 2368,
     "host": "0.0.0.0"
   },
   "database": {
-    "client": "mysql",
+    "client": "sqlite3",
     "connection": {
-      "host": "mysql-db",
-      "port": 3306,
-      "user": "admin",
-      "password": "DATABASE_PASSWORD",
-      "database": "DATABASE_NAME"
+      "filename": "content/data/ghost.db"
     }
   },
   "mail": {
@@ -19,10 +15,12 @@
   },
   "logging": {
     "transports": [
+      "file",
       "stdout"
     ]
   },
+  "process": "systemd",
   "paths": {
-    "contentPath": "/var/lib/ghost/content"
+    "contentPath": "content"
   }
 }
