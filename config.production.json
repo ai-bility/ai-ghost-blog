@@ -1,13 +1,17 @@
 {
-  "url": "https://ai-bility-ghost-blogs.onrender.com",
+  "url": "https://your-ghost-blog.onrender.com",
   "server": {
-    "port": 2368,
+    "port": "process.env.PORT",
     "host": "0.0.0.0"
   },
   "database": {
-    "client": "sqlite3",
+    "client": "mysql",
     "connection": {
-      "filename": "content/data/ghost.db"
+      "host": "process.env.database__connection__host",
+      "port": 3306,
+      "user": "process.env.database__connection__user",
+      "password": "process.env.database__connection__password",
+      "database": "process.env.database__connection__database"
     }
   },
   "mail": {
