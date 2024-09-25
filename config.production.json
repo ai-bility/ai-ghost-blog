@@ -1,17 +1,17 @@
 {
   "url": "https://ai-bility-ghost-blogs.onrender.com",
   "server": {
-    "port": "process.env.PORT",
+    "port": 2368,
     "host": "0.0.0.0"
   },
   "database": {
     "client": "mysql",
     "connection": {
-      "host": "process.env.database__connection__host",
+      "host": "localhost", // Use localhost here
       "port": 3306,
-      "user": "process.env.database__connection__user",
-      "password": "process.env.database__connection__password",
-      "database": "process.env.database__connection__database"
+      "user": "YOUR_BLUEHOST_DB_USER",
+      "password": "YOUR_BLUEHOST_DB_PASSWORD",
+      "database": "YOUR_BLUEHOST_DB_NAME"
     }
   },
   "mail": {
